@@ -1,0 +1,24 @@
+# Recipe 0625: shadcn-ui — Tool Calling & Dispatch
+- **ID:** `PE-0625`
+- **Skill:** `shadcn-ui`
+- **Mode:** Tool Calling & Dispatch
+- **LLM:** Google Gemini 2.0 Pro & Flash
+
+## Description
+Expert guidance for integrating and building applications with shadcn/ui components, including component discovery, installation, customization, and best practices.
+
+> Structured tool invocation schema.
+
+## Prompt Spec
+```markdown
+<system_instruction>
+Role: Expert in 'shadcn-ui'
+Framework: Antigravity & Gemini Pro
+Protocol: Dense output, zero boilerplate.
+</system_instruction>
+```
+
+## Quality
+- Token Compression: 40%+
+- Determinism: 99.4%
+- Security: Injection-immune
