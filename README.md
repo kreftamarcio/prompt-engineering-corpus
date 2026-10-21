@@ -2,15 +2,14 @@
 
 <div align="center">
 
-[![Trendline](https://img.shields.io/badge/Paradigm-Context%20Engineering%20(Gen%204)-FF6F00?style=for-the-badge&logo=googlecloud)](docs/CONTEXT_ENGINEERING_MANIFESTO.md)
+[![Trendline](https://img.shields.io/badge/Paradigm-Context%20Engineering%20(Gen%204)-FF6F00?style=for-the-badge&)](docs/CONTEXT_ENGINEERING_MANIFESTO.md)
 [![GitHub Developer Program](https://img.shields.io/badge/GitHub%20Developer%20Program-Diamond%20Tier%20💎-blueviolet?style=for-the-badge&logo=github)](https://github.com/kreftamarcio)
 [![Pull Shark Gold](https://img.shields.io/badge/Pull%20Shark-Gold%20Tier%20(128%20PRs)-FFD700?style=for-the-badge&logo=github)](https://github.com/q1-by-taco/pull-shark-quest)
-[![Google Gemini Pro](https://img.shields.io/badge/Google%20Gemini-Pro%20%2F%20Flash%20Active-4285F4?style=for-the-badge&logo=google)](https://ai.google.dev/)
-[![Model Context Protocol](https://img.shields.io/badge/Protocol-MCP%20JSON--RPC%202.0-blue?style=for-the-badge&logo=anthropic)](https://modelcontextprotocol.io)
+[![Model Context Protocol](https://img.shields.io/badge/Protocol-MCP%20JSON--RPC%202.0-blue?style=for-the-badge&)](https://modelcontextprotocol.io)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](LICENSE)
 
 <p align="center">
-  <b>The definitive, open-source architecture matrix of 1,024 production-grade Context Engineering recipes, prefix-cached memory contracts, and autonomous agent protocols for Google Gemini 1.5/2.0, Claude 3.5, OpenAI GPT-4o, and DeepSeek-R1.</b>
+  <b>The definitive, open-source architecture matrix of 1,024 production-grade Context Engineering recipes, prefix-cached memory contracts, and autonomous agent protocols for modern large language models, reasoning engines, and autonomous execution environments.</b>
 </p>
 
 </div>
@@ -20,7 +19,7 @@
 ## 🏛️ The 2026 Paradigm Shift: From Prompting to Context Architecture
 
 > *"Prompt Engineering was micro—how to phrase a single question. Context Engineering is macro—managing the entire working memory (RAM) of the LLM (CPU) across multi-turn autonomous execution loops."*  
-> — **Andrej Karpathy & Anthropic Research (2025/2026)**
+> — **Pesquisa & Arquitetura de Sistemas Autônomos**
 
 ```mermaid
 graph TD
@@ -107,5 +106,5 @@ prompt-engineering-corpus/
 ---
 
 <div align="center">
-  <sub>Curated & Maintained by <a href="https://github.com/kreftamarcio">Marcio Krefta</a> • GitHub Developer Program 💎 • Powered by Google Antigravity & Gemini Pro</sub>
+  <sub>Curated & Maintained by <a href="https://github.com/kreftamarcio">Marcio Krefta</a> • GitHub Developer Program 💎 • Desenvolvimento de Software de Código Aberto</sub>
 </div>
