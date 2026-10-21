@@ -1,0 +1,49 @@
+name: DevSecOps & Legal Compliance Gate
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  compliance-audit:
+    name: Forensic License, Secret & Integrity Gate
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Validate Official LICENSE Presence
+        run: |
+          if [ ! -f "LICENSE" ]; then
+            echo "❌ ERRO: Arquivo oficial LICENSE ausente!"
+            exit 1
+          fi
+          echo "✅ Arquivo oficial LICENSE (MIT) validado."
+
+      - name: Static Secret Scanner
+        run: |
+          echo "Verificando ausência de chaves e segredos em arquivos alterados..."
+          # Bloquear chaves Google, OpenAI, Anthropic, GitHub e AWS
+          if grep -rnEI 'AIza[0-9A-Za-z\\-_]{35}|sk-[a-zA-Z0-9]{20,}|ghp_[a-zA-Z0-9]{36}|AKIA[0-9A-Z]{16}' tools/ docs/ recipes/ 2>/dev/null; then
+            echo "❌ ERRO: Segredo ou chave de API detectada no repositório!"
+            exit 1
+          fi
+          echo "✅ Nenhuma chave ou segredo detectado em código/documentação."
+
+      - name: Anti-Domain Spoofing Gate
+        run: |
+          echo "Verificando integridade de co-autoria nos commits recentes..."
+          if git log -1 --format="%B" | grep -Eiq 'Co-authored-by:.*<(.*)@(google\.com|openai\.com|anthropic\.com|microsoft\.com)>'; then
+            echo "❌ ERRO: Uso não autorizado de domínio corporativo terceiro (@google.com/@openai.com) em Co-authored-by!"
+            exit 1
+          fi
+          echo "✅ Validação Anti-Impersonation: 100% CONFORME."
+
+      - name: Verify CLI Compiler Execution
+        run: |
+          python3 tools/context_compiler.py --name test-spec --domain "DevSecOps Audit" --objective "Verify Zero Epistemic Drift"
+          echo "✅ Context Compiler executado e validado com sucesso."
