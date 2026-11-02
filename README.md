@@ -12,12 +12,11 @@ Maintained by [Márcio Krefta](https://github.com/kreftamarcio) ([Q1 by TACO](ht
 ```
 prompt-engineering-corpus/
 ├── docs/
-│   ├── CONTEXT_ENGINEERING_MANIFESTO.md        # the author's view on context engineering
+│   ├── CONTEXT_ENGINEERING_MANIFESTO.md        # notes on context engineering
 │   └── THE_8_PILLARS_OF_CONTEXT_ENGINEERING.md # the 8 principles used to organize the recipes
 ├── tools/
 │   └── context_compiler.py                     # CLI that generates a context contract
 ├── recipes/                                    # prompt / context recipes in Markdown
-├── benchmarks/                                 # example scripts
 └── README.md
 ```
 
@@ -46,4 +45,4 @@ python3 tools/context_compiler.py \
   --objective "Audit pull requests, run test verification and enforce conventional commits"
 ```
 
-> **Note:** these recipes are reference patterns. They have not been benchmarked against real models in this repository, and results vary by model and provider.
+> **Note:** these recipes are reference patterns and have not been benchmarked against production models in this repository.
